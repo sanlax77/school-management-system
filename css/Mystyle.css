@@ -1,168 +1,107 @@
-* {box-sizing: border-box;}
-
-.selector-for-some-widget {
-  box-sizing: content-box;
+/* ===== Global ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-   body
-   {
-      background-color :rgb(198, 224, 240);
+body {
+  background-color: rgb(198, 224, 240);
+}
 
-   } 
+/* ===== Headings ===== */
+h3 {
+  background-color: rgba(147, 227, 241, 0.934);
+  font-style: oblique;
+  color: blueviolet;
+  text-align: center;
+  width: 100%;
+}
 
-   h3
-      {
-         background-color: rgba(147, 227, 241, 0.934);
-         align-content:normal;
-         position: relative;
-         font-style: oblique;
-         color:blueviolet;
-         align-items: center;
-         /*height: 300;
-         width: 80%;*/
-         text-align: center;
-         width: 100%;
-      }
-     
-      .input-group-text {
-        color:rgb(13, 215, 251);
-        text-decoration: solid;
-      }
-      h5
-     {
-      color:#0d6efd;
-     }
-    
-      bg-light {
-         background-color: #a6ebb54f!important;
-     }
-      navbar-toggler:hover {
-         background-color: aqua;
-         text-decoration: none;
-     }
-    
-     
-     
-   .header{
+h5 {
+  color: #0d6efd;
+}
 
-       font-size:xx-large;
-      align-content: center;
-      font-family: 'Times New Roman', Times, serif;
-      column-gap: 0cap;
-      align-items:flex-start;
-     
-      color: aliceblue;
-      align-items: center;
-      height: 300;
-      width: 80%;
-      
-      }
-      .navbar-light .navbar-nav .nav-link  .nav-item dropdown
-     {
-      font-style:normal;
-      color:olive;
-      
-      
-      
-    }
-    
-    *, *:before, *:after {
-      box-sizing: border-box;
-    }
-    .profileBlock
-    {
-      box-sizing: border-box;
-      border-style: solid;
-      border-color: #0d6efd;
-      color:darkgoldenrod;
- 
+.header {
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  color: aliceblue;
+  width: 80%;
+}
 
-     
-    }
-   
-    .profileBorder
-    {
-        box-sizing: border-box;   
-        border-style:solid;      
-        border-color: #0d6efd ;
-        color:darkgoldenrod;
-      
-    }
-    
-    .profileTitle
-    {
-      text-decoration: underline;
-      box-sizing:border-box;
-      color:blue;
-      
-      
-      
-    }
-    .label
-    {
-      font-weight: bolder;
-    }
-     
-        .nav-link:active
-    {
-      
-         color: #00ff66;
-       }
+/* ===== Navbar ===== */
+.bg-light {
+  background-color: #a6ebb54f !important;
+}
 
-       .nav-link:hover
-    {
-      
-         color: #ffd500;
-       }
+.navbar-toggler:hover {
+  background-color: aqua;
+  text-decoration: none;
+}
 
-    
-      
-     footer {
-     
-      position:absolute bottom 0;
-      background-color: rgb(13, 215, 251);
-      color: white;
-      font-size: small;
-      padding:3px;
-      text-align: center;
-      width: 100%;
-      left: 10px;
-      align-self: start;
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-item.dropdown {
+  font-style: normal;
+  color: olive;
+}
 
-    }
-    
-    .table
-    {
-      border-color:hsl(252, 100%, 50%);
-      
-    }
-    
-    figcaption
-    {
-      align-content: center;
-      color: crimson;
-    }
+/* hover must come before active */
+.nav-link:hover {
+  color: #ffd500;
+}
 
-    .btncolor
-    {
-      background-color:#0dcaf0;
-      color:goldenrod;
+.nav-link:active {
+  color: #00ff66;
+}
 
-    }
-    btn:hover
-    {
-      color:#0dcaf0;
-    }
-    .loginError
-    {
-      display:none;
-      width:100%;
-      color:orangered;
-      font-size: 1.5rem;
+/* ===== Forms ===== */
+.input-group-text {
+  color: rgb(13, 215, 251);
+}
 
-    }
-    
-    dd {
-      display: block;
-      margin-left: 40px;
-    }
+.label {
+  font-weight: bolder;
+}
+
+/* ===== Profile blocks ===== */
+.profileBlock,
+.profileBorder {
+  border-style: solid;
+  border-color: #0d6efd;
+  color: darkgoldenrod;
+}
+
+.profileTitle {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* ===== Buttons ===== */
+.btnColor {
+  background-color: #0dcaf0;
+  color: goldenrod;
+}
+
+.btnColor:hover {
+  color: #0dcaf0;
+}
+
+/* ===== Login error (hidden until JS shows it) ===== */
+.loginError {
+  display: none;
+  width: 100%;
+  color: orangered;
+  font-size: 1.5rem;
+}
+
+/* ===== Tables / misc ===== */
+.table {
+  border-color: hsl(252, 100%, 50%);
+}
+
+figcaption {
+  color: crimson;
+}
+
+/* ===== Footer ===== */
+footer {
+  position: absolute;
+  bottom:
