@@ -60,6 +60,12 @@ h5 {
 .label {
   font-weight: bolder;
 }
+.greenBg {
+  background-color: #a6ebb5;
+  color: #1b4d2a;
+  font-weight: bold;
+}
+
 
 /* ===== Profile blocks ===== */
 .profileBlock,
