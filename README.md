@@ -117,5 +117,5 @@ This is a front-end learning project, so some parts are simplified on purpose:
 **Laxmi Satish**
 MCA (2023) | Fullstack Developer (Java, Spring Boot, React, JavaScript)
 
-- GitHub: [@YOUR-USERNAME](https://github.com/YOUR-USERNAME)
-- LinkedIn: [Your LinkedIn URL](https://www.linkedin.com/in/YOUR-PROFILE)
+- GitHub: https://github.com/sanlax77
+- LinkedIn: https://www.linkedin.com/in/laxmisatish
