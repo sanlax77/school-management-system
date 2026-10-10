@@ -13,11 +13,11 @@ A responsive web application for **Spring Flowers Public School** that lets a st
   <tr>
     <td align="center">
       <b>Login</b><br>
-      < img src ="Login.png" alt="Login page" width="400">
+     <img src="/Login.png" alt="Login page" width="400">
     </td>
     <td align="center">
       <b>Home</b><br>
-      < img src ="Home.png" alt="Home page" width="400">
+     <img src="/Home.png" alt="Home page" width="400">
     </td>
   </tr>
   <tr>
@@ -27,17 +27,11 @@ A responsive web application for **Spring Flowers Public School** that lets a st
     </td>
     <td align="center">
       <b>Profile</b><br>
-      <img src="/Studentprofile.png" alt="Student profile page" width="400">
+      <img src="/StudentProfile.png" alt="Student profile page" width="400">
     </td>
   </tr>
 </table>
-| Login | Home |
-|-------|------|
-| ![Login]( ./Login.png) | ![Home](/Home.png) |
 
-| Exam Result | Profile |
-|-------------|---------|
-| ![Exam Result](/ExamResult.png) | ![Profile](/StudentProfile.png) |
 
 
 ## Features
