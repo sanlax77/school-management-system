@@ -11,7 +11,7 @@ A responsive web application for **Spring Flowers Public School** that lets a st
 
 | Login | Home |
 |-------|------|
-| ![Login](/login.png) | ![Home](screenshots/home.png) |
+| ![Login](/Login.png) | ![Home](screenshots/home.png) |
 
 | Exam Result | Profile |
 |-------------|---------|
