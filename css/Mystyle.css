@@ -3,8 +3,16 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background-color: rgb(198, 224, 240);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+   background-color: rgb(198, 224, 240);
+}
+
+main {
+  flex: 1;
 }
 
 /* ===== Headings ===== */
@@ -109,5 +117,10 @@ figcaption {
 
 /* ===== Footer ===== */
 footer {
-  position: absolute;
-  bottom:
+  background-color: rgb(13, 215, 251);
+  color: white;
+  font-size: small;
+  padding: 3px;
+  text-align: center;
+  width: 100%;
+}
