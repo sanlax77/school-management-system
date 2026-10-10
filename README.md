@@ -9,13 +9,35 @@ A responsive web application for **Spring Flowers Public School** that lets a st
 
 ## Screenshots
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <b>Login</b><br>
+      < img src ="Login.png" alt="Login page" width="400">
+    </td>
+    <td align="center">
+      <b>Home</b><br>
+      < img src ="Home.png" alt="Home page" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Exam Result</b><br>
+      <img src="/ExamResult.png" alt="Exam result page" width="400">
+    </td>
+    <td align="center">
+      <b>Profile</b><br>
+      <img src="/Studentprofile.png" alt="Student profile page" width="400">
+    </td>
+  </tr>
+</table>
 | Login | Home |
 |-------|------|
-| ![Login](/Login.png) | ![Home](screenshots/home.png) |
+| ![Login]( ./Login.png) | ![Home](/Home.png) |
 
 | Exam Result | Profile |
 |-------------|---------|
-| ![Exam Result](/ExamResult.png) | ![Profile](screenshots/profile.png) |
+| ![Exam Result](/ExamResult.png) | ![Profile](/StudentProfile.png) |
 
 
 ## Features
