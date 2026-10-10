@@ -98,6 +98,11 @@ h5 {
   color: #0dcaf0;
 }
 
+.greenBg {
+  background-color: #a6ebb5;
+  color: #1b4d2a;
+  font-weight: bold;
+}
 /* ===== Login error (hidden until JS shows it) ===== */
 .loginError {
   display: none;
