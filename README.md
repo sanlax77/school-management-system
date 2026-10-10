@@ -11,11 +11,11 @@ A responsive web application for **Spring Flowers Public School** that lets a st
 
 | Login | Home |
 |-------|------|
-| ![Login](screenshots/login.png) | ![Home](screenshots/home.png) |
+| ![Login](/login.png) | ![Home](screenshots/home.png) |
 
 | Exam Result | Profile |
 |-------------|---------|
-| ![Exam Result](screenshots/exam-result.png) | ![Profile](screenshots/profile.png) |
+| ![Exam Result](/ExamResult.png) | ![Profile](screenshots/profile.png) |
 
 
 ## Features
