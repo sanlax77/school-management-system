@@ -1,182 +1,154 @@
-let Activity=[];
-let mystud=[];
-let pstud=[];
-let validdata=false ;
-var values=  ["Algebra","Geometry", "Physics", "Chemistry",
-"Chemistry","Biology","Computer","PT","Art","Music"]    ;
+// ===== State =====
+let mystud = [];
 
-//Fetching the JsonData
-function getJdata()     
-{
-    fetch('./data/Student.json')
-    .then((response)  => response.json())
-    .then((json) => {
-        console.log(json);
-    mystud=JSON.parse(JSON.stringify(json));
-        console.log(mystud.Student[0]);
-        mystud=JSON.parse(JSON.stringify(json)).Student;
-        pstud=mystud.slice();
-        console.log(mystud[0]);
-        console.log(mystud.length);
+// ===== Load student data (cached, so the JSON is fetched only once) =====
+async function getJdata() {
+    if (mystud.length > 0) return mystud;
 
-        const map = new Map(Object.entries(JSON.parse(json)));
-        console.log(map);
+    const response = await fetch('data/Student.json');
+    if (!response.ok) {
+        throw new Error('Could not load Student.json (status ' + response.status + ')');
+    }
+    const json = await response.json();
+    mystud = json.Student;
+    return mystud;
+}
 
+// ===== Login =====
+async function Login() {
+    try {
+        await getJdata();   // wait until data is loaded
+        callLogin();
+    } catch (error) {
+        console.error(error);
+        document.getElementById("loginError").style.display = "block";
+    }
+}
+
+function callLogin() {
+    const uid = document.getElementById("u1").value.trim();
+    const pass = document.getElementById("pass").value;
+
+    const student = mystud.find(s => s.username === uid && s.password === pass);
+
+    if (student) {
+        sessionStorage.setItem('StudId', student.id);
+        sessionStorage.setItem('username', student.username);
+        window.location.href = "welcome.html";
+    } else {
+        document.getElementById("loginError").style.display = "block";
+    }
+}
+
+function hideLoginError() {
+    document.getElementById("loginError").style.display = "none";
+}
+
+// ===== Exam results =====
+async function displayMarks() {
+    try {
+        await getJdata();
+        callDisplayMarks();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function callDisplayMarks() {
+    const subject = document.getElementById("subject").value;
+    const marks = document.getElementById("marks");
+    const grade = document.getElementById("grade");
+
+    marks.value = "";
+    grade.value = "";
+
+    const student = mystud.find(s => String(s.id) === sessionStorage.getItem("StudId"));
+
+    // The subject name in the dropdown must match the key in the JSON file
+    if (student && student[subject]) {
+        marks.value = student[subject].marks;
+        grade.value = student[subject].grade;
+    }
+}
+
+// ===== Extra-curricular activities =====
+const ACTIVITY_PREFIX = "Activity: ";
+
+function addActivity() {
+    const name = document.getElementById("activityName").value.trim();
+    const details = document.getElementById("activityDetails").value.trim();
+
+    if (!name) {
+        alert("Please enter an activity name.");
+        return;
+    }
+
+    sessionStorage.setItem(ACTIVITY_PREFIX + name, details);
+    alert("Activity Submitted");
+}
+
+function listActivity() {
+    const activityList = document.getElementById("activityList");
+    const listSection = document.getElementById("list");
+
+    activityList.innerHTML = "";   // clear first so items don't repeat
+
+    const keys = [];
+    for (let i = 0; i < sessionStorage.length; i++) {
+        const key = sessionStorage.key(i);
+        if (key.startsWith(ACTIVITY_PREFIX)) keys.push(key);
+    }
+
+    if (keys.length === 0) {
+        listSection.style.display = "none";
+        return;
+    }
+
+    listSection.style.display = "block";
+
+    keys.forEach(key => {
+        const dt = document.createElement("dt");
+        dt.textContent = key;                       // textContent is safe from injected HTML
+        activityList.appendChild(dt);
+
+        const dd = document.createElement("dd");
+        dd.textContent = sessionStorage.getItem(key);
+        activityList.appendChild(dd);
     });
 }
-  
-//Login function to get jsondata and veriry usrname and password
-function Login()
-   {
-       fetchStudentdata();
-   }
 
-function fetchStudentdata()
-{
-     getJdata();
-    callLogin();
-    
-}
+// ===== Profile page =====
+// JSON key -> HTML element id
+const PROFILE_FIELDS = {
+    id: "Sid",
+    username: "Pname",
+    dob: "sdob",
+    email: "semail",
+    Fname: "fname",
+    Mname: "Motname",
+    Femail: "femail",
+    Memail: "memail",
+    FMno: "fno",
+    Mtno: "mno"
+};
 
+async function profileData() {
+    try {
+        await getJdata();
 
-/*function to validate user name and passowrd*/
-function callLogin()
-{
-     
-     let uid=document.getElementById("u1").value;
-     let pass=document.getElementById("pass").value;
-     //a boolean flag to check valid user
-     let validUser=false
-  
-    for(let i=0;i<mystud.length;i++)
-    {
-        
-        if (mystud[i].username ==uid && mystud[i].password==pass)
-        {
-                sessionStorage.clear;
-                validUser=true;
-                //setting session storage for username and id
-                sessionStorage.setItem('StudId',mystud[i].id);
-                sessionStorage.setItem('username',mystud[i].username);
-                             break;
-                
-         
-       }
-    }
+        const student = mystud.find(s => String(s.id) === sessionStorage.getItem("StudId"));
+        if (!student) return;
 
-         if(validUser)
-        { 
-                //redirrecting to welcome page
-            window.location.href="welcome.html";
+        for (const [jsonKey, elementId] of Object.entries(PROFILE_FIELDS)) {
+            const element = document.getElementById(elementId);
+            if (element && student[jsonKey] !== undefined) {
+                element.textContent = student[jsonKey];
+            }
         }
-        else
-        {
-            //if error found display eror
-         document.getElementById("loginError").style.display = "block";
-        }
+    } catch (error) {
+        console.error(error);
+    }
 }
-
-   //if no error found hide the eror message
-    function hideLoginError()
-    {
-        document.getElementById("loginError").style.display = "none";
-    }
-
-
-//function display marks in exam results form JSon file
-    function displayMarks()
-    {
-         getJdata();
-        callDisplayMarks();
-
-       
-    }
-   
-   
-    //FUNCTION TO DISPLAY THE MARKS IN EXAM RESULT PAGE
-    function callDisplayMarks()
-{
-        console.log("indisplay");
-
-        let subjects=document.getElementById("subject").value;
-        let marks=document.getElementById("marks");
-        let grade=document.getElementById("grade");
-
-         marks.value="";
-        grade.value="";
-
-        for(let i= 0;i<mystud.length;i++)
-    {
-        
-        if (mystud[i].id  == sessionStorage.getItem("StudId"))
-                //sessionStorage.getItem(StudId))
-                
-     {
-                for(const key in mystud[i])
-                {
-                
-                if( mystud[i].hasOwnProperty (key)) 
-    {
-
-                    
-                 if(subjects ==key)
-    {
-                  
-       
-
-        switch(subjects)
-
-                {
-
-                case "Algebra":
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                case "Geometry":
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                 case"Physics":
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                case "Chemistry":
-                            
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];                                     
-                                break;
-                case "Biology":
-                            
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                case "Music":   
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-               case "Computer":
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                 break;
-                        
-                case "Art": 
-                                 marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                 break;
-                case "Social": 
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                case "PT":
-                                marks.value=mystud[i][key]["marks"];
-                                grade.value=mystud[i][key]["grade"];
-                                break;
-                                            
-            defualt:document.writeln("Incorrect choice selected!");
-                            
-                                        
-           }
-   
 
      }             
                                         
