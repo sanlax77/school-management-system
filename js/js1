@@ -1,0 +1,14 @@
+
+
+
+
+
+function s1()
+{
+console.log(ocument.getElementById("fname"))
+document.getElementById('fname').innerHTMl
+="hello";
+
+}
+
+s1();

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    
+  </head>
+  <body>
+
+
+    <main class="container" >  
+          <section class="pageHeading text-center mt-5 mb-1 " >
+             <em><h3>Student Profile</em> </h3>
+            </section> 
+
+              <section class="row ProfileBorder ProfileBlock">
+              <div  id= "Pname" class ="text-center  mt-3 mb-2 p-3" >
+                    <h2 class="profileBorder"  >
+                      <label forname="Pname" > Jayesh Sharma </label></h2>
+                 <p id ="Sid"><em mt-2 p-3 >Id:H0010238</em></p>   
+                </div>
+            </section>
+            <section class="row mt-2 p-3 ProfileBlock">
+              <!--empty div-->
+              <div class ="col-md-1"></div>
+             
+              <!--Students div-->
+              <div class="col-md-4 profileBorder mb-5 p-3 ">
+                <h4 class="profileTitle">Student Information</h4>
+                
+                <div>
+                  <span class="label">Dob:</span>
+                    <div id="sdob" class="mb-1" >22 March2022</div>
+                    </div>
+                    <div>
+                      <span class="label">Address:</span>
+                      <div class="mb-1">12/4 Mannat ,Borivali  ,Mumbai,410033
+
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <span class="label">Email Id:</span>
+                      <div id="semail" class="mb-1" >rahul@gmail.com</div>
+                    </div>
+                    <div class="mb-2">
+                       <span class="label">BloodGroup:</span>
+                      <div class="mb-1">0 +ve </div>
+                    </div>
+
+                    <div class="mb-2">
+                      <span class="label">Division:</span>
+                      <div class="mb-1">A</div>
+                    </div>
+                  </div>
+
+                <!--empty div-->
+                    <div class="col-md-2"></div>
+                    <!---parents div
+                    <h4 class="ProfileTitle">Parent Information</h4>
+                    <div class="col-md-2"></div>-->
+
+                    <div class="col-md-4 profileBorder mb-5 p-3 ">
+                      <h4 class="profileTitle">Parent Information</h4>
+                      <div class="mb-2">
+                        <span class="label" >Father's Name:</span>
+                        
+                        <div id="fname" class="mb-1" >Jayram Deo</div>
+                      </div>
+                      <div class="mb-2">
+                        <span class="label" >Father's Number:</span>
+                        <div  id="fno" class="mb-1" >89712283</div>
+                      </div>
+                      <div class="mb-2">
+                        <span class="label">Father's Email:</span>
+                        <div id="femail" class="mb-1" >Jayramdeo@gmail.com</div>
+                      </div>
+                      <div class="mb-2">
+                        <span class="label">Mother's Name:</span>
+                        <div id="Mname" class="mb-1" >Sunita</div>
+                      </div>
+                      <div class="mb-2">
+                        <span class="label">Mother's Mobile No</span>
+                        <div id="mno" class="mb-1" > 9835833331 </div>           
+                      <div class="mb-2">
+                        <span class="label">Mother's Email:</span>
+                        <div id="memail" class="mb-1" >Sunitadeo@gmail.com</div>
+                      </div>
+                      <!--empty div-->
+                      <div class="col-md-1"></div>
+            </section>
+
+
+      <!--ProjectScript-->
+ 
+
+   
+   
+
+            </main>
+            <footer class="mt-5" position-absolute bottom-0>
+              Created  by Laxmi Satish ,January 2023
+            </footer>
+
+
+      <script src="js/myScript.js"></script>
+      <script type="text/JavaScript">
+        //for displaying the user name
+      
+       
+       document.getElementById("StudentName").innerHTML=sessionStorage.getItem("username");
+        document.getElementById("Pname").innerHTML=sessionStorage.getItem("username");
+      //  document.getElementById("id").innerHTML=sessionStorage.getItem("StudId");
+      /* document.getElementById("fname").innerHTML="";
+        document.getElementById("Mname").innerHTML="";
+        
+        document.getElementById("semail").innerHTMl="";
+        document.getElementById("femail").innerHTML="";
+        document.getElementById("memail").innerHTML="";
+        document.getElementById("fno").innerHTMl="";
+        document.getElementById("mno").innerHTML="";
+        document.getElementById("sdob").innerHTMl="";
+         */
+       profileData();
+      
+    
+        
+       
+      
+      <script src="js1.js"></script>
+     
+  </body>
+</html>

@@ -1,0 +1,168 @@
+* {box-sizing: border-box;}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+   body
+   {
+      background-color :rgb(198, 224, 240);
+
+   } 
+
+   h3
+      {
+         background-color: rgba(147, 227, 241, 0.934);
+         align-content:normal;
+         position: relative;
+         font-style: oblique;
+         color:blueviolet;
+         align-items: center;
+         /*height: 300;
+         width: 80%;*/
+         text-align: center;
+         width: 100%;
+      }
+     
+      .input-group-text {
+        color:rgb(13, 215, 251);
+        text-decoration: solid;
+      }
+      h5
+     {
+      color:#0d6efd;
+     }
+    
+      bg-light {
+         background-color: #a6ebb54f!important;
+     }
+      navbar-toggler:hover {
+         background-color: aqua;
+         text-decoration: none;
+     }
+    
+     
+     
+   .header{
+
+       font-size:xx-large;
+      align-content: center;
+      font-family: 'Times New Roman', Times, serif;
+      column-gap: 0cap;
+      align-items:flex-start;
+     
+      color: aliceblue;
+      align-items: center;
+      height: 300;
+      width: 80%;
+      
+      }
+      .navbar-light .navbar-nav .nav-link  .nav-item dropdown
+     {
+      font-style:normal;
+      color:olive;
+      
+      
+      
+    }
+    
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    .profileBlock
+    {
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: #0d6efd;
+      color:darkgoldenrod;
+ 
+
+     
+    }
+   
+    .profileBorder
+    {
+        box-sizing: border-box;   
+        border-style:solid;      
+        border-color: #0d6efd ;
+        color:darkgoldenrod;
+      
+    }
+    
+    .profileTitle
+    {
+      text-decoration: underline;
+      box-sizing:border-box;
+      color:blue;
+      
+      
+      
+    }
+    .label
+    {
+      font-weight: bolder;
+    }
+     
+        .nav-link:active
+    {
+      
+         color: #00ff66;
+       }
+
+       .nav-link:hover
+    {
+      
+         color: #ffd500;
+       }
+
+    
+      
+     footer {
+     
+      position:absolute bottom 0;
+      background-color: rgb(13, 215, 251);
+      color: white;
+      font-size: small;
+      padding:3px;
+      text-align: center;
+      width: 100%;
+      left: 10px;
+      align-self: start;
+
+    }
+    
+    .table
+    {
+      border-color:hsl(252, 100%, 50%);
+      
+    }
+    
+    figcaption
+    {
+      align-content: center;
+      color: crimson;
+    }
+
+    .btncolor
+    {
+      background-color:#0dcaf0;
+      color:goldenrod;
+
+    }
+    btn:hover
+    {
+      color:#0dcaf0;
+    }
+    .loginError
+    {
+      display:none;
+      width:100%;
+      color:orangered;
+      font-size: 1.5rem;
+
+    }
+    
+    dd {
+      display: block;
+      margin-left: 40px;
+    }

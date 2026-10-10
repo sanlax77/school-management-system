@@ -1,0 +1,270 @@
+{
+
+    "Student": [{
+            "id": "1",
+            "username": "Lax",
+            "password": "Lax@123",
+            "dob": "8th April,1977",
+            
+            "email": "sanlax04@gmail.com",
+            "Fname":"Sheshadri",
+            "Mname":"Vijaya",
+            "Femail":"Sheshadrirao@gmail.com",
+            "Memail":"vijayas@gmail.com",
+            "FMno":"986532223",
+            "Mtno":"986783122",
+            "Algebra": {
+                "marks": "89",
+                "grade": "A+"
+            },
+            "Geometry":{
+                "marks":"78",
+                "grade":"B"
+            },
+            "Physics":{
+                  "marks":"78",
+                "grade":"B"
+           },
+           "Chemistry":        {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Biology":
+           {
+            "marks":"78",
+            
+            "grade":"B"
+           },
+           "Computer":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Social":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+
+           "Music":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           
+                    "Art":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "PT":
+           {            
+            "marks":"78",
+            "grade":"B"
+           }
+            
+
+        },
+       
+       
+        {
+
+            "id": "2",
+            "username": "Rahul",
+            "password": "Rahul@123",
+            "dob": "22 March,1979",
+            "email": "rahul08@gmail.com",
+            "Fname":"Harish",
+            "Mname":"Ayesha",
+            "Femail":"Harishgm@gmail.com",
+            "Memail":"Ayeshaag@gmail.com",
+            "FMno":"98775134",
+            "Mtno":"98775133",
+
+            "Algebra": {
+                "marks": "89",
+                "grade": "A+"
+            },
+            "Geometry":{
+                "marks":"78",
+                "grade":"B"
+            },
+            "Physics":{
+                  "marks":"78",
+                "grade":"B"
+           },
+           "Chemistry":        {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Biology":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Computer":
+           {
+            "marks":"98",
+            "grade":"A+"
+           },
+           "Social":
+           {
+            "marks":"85",
+            "grade":"A"
+           },
+
+           "Music":
+           {
+            "marks":"80",
+            "grade":"A"
+           },
+           
+           "Art":
+           {
+            "marks":"90",
+            "grade":"A"
+           },
+           "PT":
+           {
+            "marks":"89",
+            "grade":"A"
+           }
+                    },
+
+        {
+
+            "id": "3",
+            "username": "savita",
+            "password": "savi@123",
+            "dob": "15th May,1975",
+            "email": "savi15@gmail.com",
+            "Fname":"Surendra",
+            "Mname":"Shilpa",
+            "Femail":"Surendrag@gmail.com",
+            "Memail":"Shipaagn@gmail.com",
+            "FMno":"9877312223",
+            "Mtno":"9877312224",
+  
+            "Algebra": {
+                "marks": "89",
+                "grade": "A+"
+            },
+            "Geometry":{
+                "marks":"78",
+                "grade":"B"
+            },
+            "Physics":{
+                  "marks":"78",
+                "grade":"B"
+           },
+           "Chemistry":        {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Biology":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Computer":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "Social":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+
+           "Music":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           
+           "Art":
+           {
+            "marks":"78",
+            "grade":"B"
+           },
+           "PT":
+           {
+            "marks":"78",
+            "grade":"B"
+           }
+                 },
+        {
+
+            "id": "4",
+            "username": "sangetha",
+            "dob": "15th May,1979",
+            "email": "sang15@gmail.com",
+            "Fname":"Verendra",
+            "Mname":"Sunita",
+            "Femail":"verendra123@gmail.com",
+            "Memail":"sunitav@gmail.com",
+            "FMno":"9877312322",
+            "Mtno":"9877312321",
+            "password": "sang@123",     
+               "Algebra": {
+
+                    "marks": "89",
+                    "grade": "A+"
+                },
+                "Geometry": {
+                    "marks":"78",
+                    "grade":"B"
+                },
+                "Physics":{
+                      "marks":"78",
+                    "grade":"B"
+               },
+               "Chemistry":       {
+                "marks":"78",
+                "grade":"B"
+               },
+               "Biology":
+               {
+                "marks":"78",
+                "grade":"B"
+               },
+               "Computer":
+               {
+                "marks":"78",
+                "grade":"B"
+               },
+               "Social":
+               {
+                "marks":"78",
+                "grade":"B"
+               },
+    
+               "Music":
+               {
+                "marks":"78",
+                "grade":"B"
+               },
+               
+               "Art":
+               {
+                "marks":"78",
+                "grade":"B"
+               },
+               "PT":
+               {
+                "marks":"78",
+                "grade":"B"
+               }
+             
+
+            }
+
+
+                
+
+
+
+
+    ]
+}
