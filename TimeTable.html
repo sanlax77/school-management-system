@@ -1,23 +1,170 @@
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Table | Spring Flowers Public School</title>
 
-main {
-  flex: 1;
-}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-footer {
-  background-color: rgb(13, 215, 251);
-  color: white;
-  font-size: small;
-  padding: 3px;
-  text-align: center;
-  width: 100%;
-}
-  Created  by Laxmi Satish ,January 2023
-</footer>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/Mystyle.css">
+</head>
 
-      </body>
-      </html>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="welcome.html">
+        <img src="img/logof.jpg" height="50" width="80" alt="School Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="welcome.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="TimeTable.html">TimeTable</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ExamResult.html">ExamResult</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ExtraCurr.html">ExtraCurricular</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="StudentName"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Student
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="StudentName">
+              <li><a class="dropdown-item" href="Sprofile.html">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html" onclick="sessionStorage.clear()">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h3>Welcome to Spring Flowers School</h3>
+  </header>
+
+  <main class="container">
+
+    <section class="pageHeading text-center mt-5 mb-4">
+      <h2>Time Table</h2>
+    </section>
+
+    <section class="table-responsive">
+      <table class="table table-striped table-hover table-bordered align-middle text-center">
+        <thead>
+          <tr>
+            <th scope="col">Period</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Algebra</td>
+            <td>English</td>
+            <td>Maths</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Social</td>
+            <td>Biology</td>
+            <td>Music</td>
+            <td>PT</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <th colspan="6">Short Break</th>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Literature</td>
+            <td>Social</td>
+            <td>Maths</td>
+            <td>Chemistry</td>
+            <td>Biology</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>English</td>
+            <td>Art</td>
+            <td>Maths</td>
+            <td>Physics</td>
+            <td>Social</td>
+          </tr>
+          <tr>
+            <th colspan="6">Lunch Break</th>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Physics</td>
+            <td>Social</td>
+            <td>Maths</td>
+            <td>Chemistry</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Maths</td>
+            <td>Social</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>Biology</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="mt-5">
+    Created by Laxmi Satish, January 2023
+  </footer>
+
+  <!-- Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Project Script -->
+  <script src="js/myScript.js"></script>
+  <script>
+    // Redirect to login if nobody is logged in
+    if (!sessionStorage.getItem("StudId")) {
+      window.location.href = "index.html";
+    }
+
+    // Show the logged-in student's name
+    document.getElementById("StudentName").textContent = sessionStorage.getItem("username");
+  </script>
+
+</body>
+</html>
+     
